@@ -66,15 +66,27 @@
   "peerDependencies": {
     "react": "^18.0.0 || ^17.0.0 || ^16.13.0"
   },
-  "husky": {
-    "hooks": {
-      "pre-push": "npm run prepare && npm run lint"
-    }
-  },
   "prettier": {
     "bracketSpacing": true,
     "jsxBracketSameLine": true,
     "trailingComma": "all",
     "useTabs": false
+  },
+  "xo": {
+    "prettier": true,
+    "env": [
+      "browser"
+    ],
+    "extends": [
+      "xo-react"
+    ],
+    "rules": {
+      "@typescript-eslint/prefer-readonly-parameter-types": "off",
+      "import/no-anonymous-default-export": "off",
+      "import/no-unassigned-import": "off",
+      "react/function-component-definition": "off",
+      "react/prop-types": "off",
+      "unicorn/no-fn-reference-in-iterator": "off"
+    }
   }
 }
